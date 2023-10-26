@@ -107,7 +107,7 @@ C {devices/code_shown.sym} 550 -150 0 0 {name=SPICE only_toplevel=false value=".
     alter vb6 $&b6
     save all
     op
-    wrdata dacsim.txt v(b0) v(b1) v(b2) v(b3) v(b4) v(b5) v(b6) v(Viout) v(Vout)
+    wrdata ~/Documents/current-output-dac-vlsi/simulations/dacsim.txt v(b0) v(b1) v(b2) v(b3) v(b4) v(b5) v(b6) i(Viout) v(Vout)
     if code eq 0 
       set appendwrite
       set wr_vecnames = FALSE
@@ -117,10 +117,10 @@ C {devices/code_shown.sym} 550 -150 0 0 {name=SPICE only_toplevel=false value=".
   quit
 .endc"}
 C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/dac.sym} -170 40 0 0 {name=X1}
-C {devices/lab_pin.sym} 130 -80 0 0 {name=p9 sig_type=std_logic lab=b6}
-C {devices/lab_pin.sym} 130 -100 0 0 {name=p10 sig_type=std_logic lab=b5}
-C {devices/lab_pin.sym} 130 -120 0 0 {name=p11 sig_type=std_logic lab=b4}
+C {devices/lab_pin.sym} 130 -200 0 0 {name=p9 sig_type=std_logic lab=b6}
+C {devices/lab_pin.sym} 130 -180 0 0 {name=p10 sig_type=std_logic lab=b5}
+C {devices/lab_pin.sym} 130 -160 0 0 {name=p11 sig_type=std_logic lab=b4}
 C {devices/lab_pin.sym} 130 -140 0 0 {name=p12 sig_type=std_logic lab=b3}
-C {devices/lab_pin.sym} 130 -160 0 0 {name=p13 sig_type=std_logic lab=b2}
-C {devices/lab_pin.sym} 130 -180 0 0 {name=p14 sig_type=std_logic lab=b1}
-C {devices/lab_pin.sym} 130 -200 0 0 {name=p15 sig_type=std_logic lab=b0}
+C {devices/lab_pin.sym} 130 -120 0 0 {name=p13 sig_type=std_logic lab=b2}
+C {devices/lab_pin.sym} 130 -100 0 0 {name=p14 sig_type=std_logic lab=b1}
+C {devices/lab_pin.sym} 130 -80 0 0 {name=p15 sig_type=std_logic lab=b0}
