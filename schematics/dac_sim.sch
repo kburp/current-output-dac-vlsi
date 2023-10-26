@@ -63,40 +63,40 @@ C {devices/code_shown.sym} 550 -150 0 0 {name=SPICE only_toplevel=false value=".
   set wr_singlescale
   let code = 0
   while code < 128
-    if code eq 0
+    if (code % 2) eq 0
+      let b0 = 1.8
+    else
       let b0 = 0
-    else
-      let b0 = code % 2
     end
-    if floor(code / 2) eq 0
+    if (floor(code / 2) % 2) eq 0
+      let b1 = 1.8
+    else
       let b1 = 0
-    else
-      let b1 = floor(code / 2) % 2
     end
-    if floor(code / 4) eq 0
+    if (floor(code / 4) % 2) eq 0
+      let b2 = 1.8
+    else
       let b2 = 0
-    else
-      let b2 = floor(code / 4) % 2
     end
-    if floor(code / 8) eq 0
+    if (floor(code / 8) % 2) eq 0
+      let b3 = 1.8
+    else
       let b3 = 0
-    else
-      let b3 = floor(code / 8) % 2
     end
-    if floor(code / 16) eq 0
+    if (floor(code / 16) % 2) eq 0
+      let b4 = 1.8
+    else
       let b4 = 0
-    else
-      let b4 = floor(code / 16) % 2
     end
-    if floor(code / 32) eq 0
+    if (floor(code / 32) % 2) eq 0
+      let b5 = 1.8
+    else
       let b5 = 0
-    else
-      let b5 = floor(code / 32) % 2
     end
-    if floor(code / 64) eq 0
-      let b6 = 0
+    if (floor(code / 64) % 2) eq 0
+      let b6 = 1.8
     else
-      let b6 = floor(code / 64) % 2
+      let b6 = 0
     end
     alter vb0 $&b0
     alter vb1 $&b1
