@@ -41,11 +41,9 @@ C {madvlsi/gnd.sym} 400 110 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 400 50 2 0 {name=p7 sig_type=std_logic lab=b5}
 C {madvlsi/gnd.sym} 500 110 0 0 {name=l12 lab=GND}
 C {devices/lab_pin.sym} 500 50 2 0 {name=p8 sig_type=std_logic lab=b6}
-C {madvlsi/vsource.sym} -10 -310 0 0 {name=Vdd1
-value=1.0}
 C {madvlsi/gnd.sym} -10 -280 0 0 {name=l13 lab=GND}
-C {devices/lab_pin.sym} -10 -340 2 0 {name=p16 sig_type=std_logic lab=Vb}
-C {devices/lab_pin.sym} 190 -230 1 0 {name=p17 sig_type=std_logic lab=Vb}
+C {devices/lab_pin.sym} -10 -340 2 0 {name=p16 sig_type=std_logic lab=Vref}
+C {devices/lab_pin.sym} 190 -230 1 0 {name=p17 sig_type=std_logic lab=Vref}
 C {madvlsi/vsource.sym} 0 80 0 0 {name=Vb1
 value=1.8}
 C {madvlsi/vsource.sym} 100 80 0 0 {name=Vb2
@@ -116,7 +114,6 @@ C {devices/code_shown.sym} 550 -150 0 0 {name=SPICE only_toplevel=false value=".
   end
   quit
 .endc"}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/dac.sym} -170 40 0 0 {name=X1}
 C {devices/lab_pin.sym} 130 -200 0 0 {name=p9 sig_type=std_logic lab=b6}
 C {devices/lab_pin.sym} 130 -180 0 0 {name=p10 sig_type=std_logic lab=b5}
 C {devices/lab_pin.sym} 130 -160 0 0 {name=p11 sig_type=std_logic lab=b4}
@@ -124,3 +121,6 @@ C {devices/lab_pin.sym} 130 -140 0 0 {name=p12 sig_type=std_logic lab=b3}
 C {devices/lab_pin.sym} 130 -120 0 0 {name=p13 sig_type=std_logic lab=b2}
 C {devices/lab_pin.sym} 130 -100 0 0 {name=p14 sig_type=std_logic lab=b1}
 C {devices/lab_pin.sym} 130 -80 0 0 {name=p15 sig_type=std_logic lab=b0}
+C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/dac.sym} -170 40 0 0 {name=X1}
+C {madvlsi/isource.sym} -10 -310 2 1 {name=Iin
+value=200u}
