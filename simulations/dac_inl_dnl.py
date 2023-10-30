@@ -1,48 +1,51 @@
 
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 
 # Load the data into a DataFrame
 file_path = 'dacsim.txt'  # Replace this with the actual file path
 df = pd.read_csv(file_path, delim_whitespace=True)
 
-# Convert Pandas Series to NumPy arrays before calculations
-output_currents = df['i(viout)'].to_numpy()
+# Initialize a list to hold the i(viout) values from the DataFrame
+i_viout_values = df['i(viout)'].to_numpy()
 
-# Sort the DataFrame based on the output current 'i(viout)'
-df_sorted_by_output = df.sort_values(by='i(viout)').reset_index(drop=True)
+# Sort the i(viout) values
+i_viout_values.sort()
 
-# Calculate the Full Scale Range
-full_scale_range = np.max(output_currents) - np.min(output_currents)
-
-# Number of bits
+# Number of bits (replace with actual value)
 n_bits = 7
 
-# Calculate the ideal step size (Delta_ideal)
-delta_ideal = full_scale_range / (2**n_bits - 1)
+# Calculate the Full-Scale Range and Ideal Step Size
+full_scale_range = max(i_viout_values) - min(i_viout_values)
+ideal_step_size = full_scale_range / (2**n_bits - 1)
 
-# Calculate the actual step sizes (Delta_actual) between adjacent output levels
-delta_actual_sorted = np.diff(df_sorted_by_output['i(viout)'].to_numpy())
+# Calculate the actual step sizes between adjacent output levels
+actual_step_sizes = np.diff(i_viout_values)
 
-# Calculate DNL: DNL = (Delta_actual - Delta_ideal) / Delta_ideal
-dnl_sorted = (delta_actual_sorted - delta_ideal) / delta_ideal
+# Calculate DNL
+dnl = (actual_step_sizes - ideal_step_size) / ideal_step_size
 
-# Calculate the INL (Integral Non-Linearity)
-# INL = Cumulative sum of DNL
-inl_sorted = np.cumsum(dnl_sorted)
-
-# Create a DataFrame that pairs the recalculated INL values with their corresponding output currents
-inl_sorted_df = pd.DataFrame({
-    'i(viout)': df_sorted_by_output['i(viout)'].iloc[1:].to_numpy(),
-    'INL': inl_sorted
-})
-
-# Plot the recalculated INL values over output currents
+# Create a plot of DNL
 plt.figure(figsize=(12, 6))
-plt.plot(inl_sorted_df['i(viout)'].to_numpy(), inl_sorted_df['INL'].to_numpy(), marker='o', linestyle='-', color='g')
-plt.title('Integral Non-Linearity (INL) over Output Currents (Recalculated)')
-plt.xlabel('Output Current (A)')
-plt.ylabel('INL Value')
+plt.plot(dnl, marker='o', linestyle='-', color='b')
+plt.title("DNL of the DAC (Adjusted Method)")
+plt.xlabel("Step Index")
+plt.ylabel("DNL (in LSBs)")
 plt.grid(True)
+
+# Calculate the INL using the sorted i(viout) values and the ideal step size
+x_values = np.arange(len(i_viout_values))
+ideal_current = x_values * ideal_step_size + i_viout_values[0]
+inl = (i_viout_values - ideal_current) / ideal_step_size
+
+# Create a plot of INL
+plt.figure(figsize=(12, 6))
+plt.plot(inl, marker='o', linestyle='-', color='g')
+plt.title("INL of the DAC (Adjusted Method)")
+plt.xlabel("Step Index")
+plt.ylabel("INL (in LSBs)")
+plt.grid(True)
+
+# Show the plots
 plt.show()
