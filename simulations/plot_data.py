@@ -32,13 +32,22 @@ ideal_line_slope = (min(i_viout_values) - max(i_viout_values)) / x_values[-1]
 ideal_current = [x*ideal_line_slope + i_viout_values[0] for x in x_values]
 plt.plot(x_values, ideal_current, 'k--')
 
+# Plot the DNL of the circuit
 plt.figure()
-dnl = np.subtract(i_viout_values, ideal_current)
+dnl = np.subtract(i_viout_values, ideal_current) / ideal_line_slope - 1
 plt.plot(x_values, dnl, marker='o')
 plt.title("DNL of the DAC")
 plt.xlabel("X")
 plt.ylabel("DNL (# LSBs)")
 plt.grid(True)
+
+# Plot the INL of the circuit
+plt.figure()
+inl = [sum(dnl[0:i]) for i in range(1, len(dnl) + 1)]
+plt.plot(x_values, inl, marker='o')
+plt.title("INL of the DAC")
+plt.xlabel("X")
+plt.ylabel("INL (# LSBs)")
 
 # Show the plot
 plt.show()
