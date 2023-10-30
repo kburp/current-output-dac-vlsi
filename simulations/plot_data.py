@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 # The name of your file
 filename = 'dacsim.txt'
@@ -27,6 +28,18 @@ plt.title('Plot of i(viout) values')
 plt.xlabel('X')
 plt.ylabel('i(viout)')
 plt.grid(True)
+ideal_line_slope = (min(i_viout_values) - max(i_viout_values)) / x_values[-1]
+ideal_current = [x*ideal_line_slope + i_viout_values[0] for x in x_values]
+plt.plot(x_values, ideal_current, 'k--')
+
+plt.figure()
+dnl = np.subtract(i_viout_values, ideal_current)
+plt.plot(x_values, dnl, marker='o')
+plt.title("DNL of the DAC")
+plt.xlabel("X")
+plt.ylabel("DNL (# LSBs)")
+plt.grid(True)
 
 # Show the plot
 plt.show()
+
