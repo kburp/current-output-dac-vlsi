@@ -105,7 +105,7 @@ C {devices/code_shown.sym} 550 -150 0 0 {name=SPICE only_toplevel=false value=".
     alter vb6 $&b6
     save all
     op
-    wrdata ~/Documents/current-output-dac-vlsi/simulations/dacsim.txt v(b0) v(b1) v(b2) v(b3) v(b4) v(b5) v(b6) i(Viout) v(Vout)
+    wrdata ~/current-output-dac-vlsi/simulations/dacsim.txt v(b0) v(b1) v(b2) v(b3) v(b4) v(b5) v(b6) i(Viout) v(Vout)
     if code eq 0 
       set appendwrite
       set wr_vecnames = FALSE
@@ -121,6 +121,11 @@ C {devices/lab_pin.sym} 130 -140 0 0 {name=p12 sig_type=std_logic lab=b3}
 C {devices/lab_pin.sym} 130 -120 0 0 {name=p13 sig_type=std_logic lab=b2}
 C {devices/lab_pin.sym} 130 -100 0 0 {name=p14 sig_type=std_logic lab=b1}
 C {devices/lab_pin.sym} 130 -80 0 0 {name=p15 sig_type=std_logic lab=b0}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/dac.sym} -170 40 0 0 {name=X1}
 C {madvlsi/isource.sym} -10 -310 2 1 {name=Iin
 value=200u}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/dac.sym} -170 40 0 0 {name=X1}
+C {madvlsi/vsource.sym} -190 60 0 0 {name=Vb7
+value=0.7}
+C {madvlsi/gnd.sym} -190 90 0 0 {name=l14 lab=GND}
+C {devices/lab_pin.sym} -190 30 2 0 {name=p18 sig_type=std_logic lab=Vbn}
+C {devices/lab_pin.sym} 280 -230 1 0 {name=p19 sig_type=std_logic lab=Vbn}
