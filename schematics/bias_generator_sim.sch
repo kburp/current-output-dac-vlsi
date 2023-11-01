@@ -18,6 +18,5 @@ value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {devices/lab_pin.sym} 230 -110 2 0 {name=p1 sig_type=std_logic lab=Ib}
+C {devices/code_shown.sym} 340 -90 0 0 {name=SPICE only_toplevel=false value=".dc V1 0 1.8 0.01"}
 C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/bias_generator.sym} 90 -10 0 0 {name=X1}
-C {devices/code_shown.sym} 340 -90 0 0 {name=SPICE only_toplevel=false value=".tran 1u 0.01"}
