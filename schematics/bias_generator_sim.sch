@@ -20,3 +20,4 @@ value=".option wnflag=1
 }
 C {devices/code_shown.sym} 340 -90 0 0 {name=SPICE only_toplevel=false value=".dc V1 0 1.8 0.01"}
 C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/bias_generator.sym} 90 -10 0 0 {name=X1}
+C {devices/lab_pin.sym} 230 -110 2 0 {name=p1 sig_type=std_logic lab=Vb}
