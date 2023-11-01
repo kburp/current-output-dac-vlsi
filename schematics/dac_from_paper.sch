@@ -682,8 +682,6 @@ C {madvlsi/ammeter1.sym} 940 -110 0 0 {name=Vbn3}
 C {madvlsi/ammeter1.sym} 710 -110 0 0 {name=Vbn4}
 C {madvlsi/ammeter1.sym} 480 -110 0 0 {name=Vbn5}
 C {madvlsi/ammeter1.sym} 250 -110 0 0 {name=Vbn6}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1480 140 3 0 {name=X1}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1600 140 3 0 {name=X2}
 C {madvlsi/gnd.sym} 1620 100 0 0 {name=l3 lab=GND}
 C {devices/lab_pin.sym} 1580 100 3 0 {name=p12 sig_type=std_logic lab=Vgate
 }
@@ -693,8 +691,6 @@ C {madvlsi/gnd.sym} 1640 240 0 0 {name=l4 lab=GND}
 C {devices/lab_pin.sym} 1270 100 3 0 {name=p4 sig_type=std_logic lab=Vgate
 }
 C {madvlsi/gnd.sym} 1230 100 0 0 {name=l7 lab=GND}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1250 140 3 0 {name=X3}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1370 140 3 0 {name=X4}
 C {madvlsi/gnd.sym} 1390 100 0 0 {name=l8 lab=GND}
 C {devices/lab_pin.sym} 1350 100 3 0 {name=p5 sig_type=std_logic lab=Vgate
 }
@@ -704,8 +700,6 @@ C {madvlsi/gnd.sym} 1410 240 0 0 {name=l9 lab=GND}
 C {devices/lab_pin.sym} 1040 100 3 0 {name=p6 sig_type=std_logic lab=Vgate
 }
 C {madvlsi/gnd.sym} 1000 100 0 0 {name=l10 lab=GND}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1020 140 3 0 {name=X5}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1140 140 3 0 {name=X6}
 C {madvlsi/gnd.sym} 1160 100 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 1120 100 3 0 {name=p7 sig_type=std_logic lab=Vgate
 }
@@ -715,8 +709,6 @@ C {madvlsi/gnd.sym} 1180 240 0 0 {name=l12 lab=GND}
 C {devices/lab_pin.sym} 810 100 3 0 {name=p8 sig_type=std_logic lab=Vgate
 }
 C {madvlsi/gnd.sym} 770 100 0 0 {name=l14 lab=GND}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 790 140 3 0 {name=X7}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 910 140 3 0 {name=X8}
 C {madvlsi/gnd.sym} 930 100 0 0 {name=l15 lab=GND}
 C {devices/lab_pin.sym} 890 100 3 0 {name=p9 sig_type=std_logic lab=Vgate
 }
@@ -726,8 +718,6 @@ C {madvlsi/gnd.sym} 950 240 0 0 {name=l16 lab=GND}
 C {devices/lab_pin.sym} 580 100 3 0 {name=p13 sig_type=std_logic lab=Vgate
 }
 C {madvlsi/gnd.sym} 540 100 0 0 {name=l17 lab=GND}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 560 140 3 0 {name=X9}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 680 140 3 0 {name=X10}
 C {madvlsi/gnd.sym} 700 100 0 0 {name=l18 lab=GND}
 C {devices/lab_pin.sym} 660 100 3 0 {name=p14 sig_type=std_logic lab=Vgate
 }
@@ -737,8 +727,6 @@ C {madvlsi/gnd.sym} 720 240 0 0 {name=l19 lab=GND}
 C {devices/lab_pin.sym} 350 100 3 0 {name=p15 sig_type=std_logic lab=Vgate
 }
 C {madvlsi/gnd.sym} 310 100 0 0 {name=l20 lab=GND}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 330 140 3 0 {name=X11}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 450 140 3 0 {name=X12}
 C {madvlsi/gnd.sym} 470 100 0 0 {name=l21 lab=GND}
 C {devices/lab_pin.sym} 430 100 3 0 {name=p16 sig_type=std_logic lab=Vgate
 }
@@ -748,8 +736,6 @@ C {madvlsi/gnd.sym} 490 240 0 0 {name=l22 lab=GND}
 C {devices/lab_pin.sym} 120 100 3 0 {name=p17 sig_type=std_logic lab=Vgate
 }
 C {madvlsi/gnd.sym} 80 100 0 0 {name=l23 lab=GND}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 100 140 3 0 {name=X13}
-C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 220 140 3 0 {name=X14}
 C {madvlsi/gnd.sym} 240 100 0 0 {name=l24 lab=GND}
 C {devices/lab_pin.sym} 200 100 3 0 {name=p18 sig_type=std_logic lab=Vgate
 }
@@ -830,3 +816,17 @@ C {devices/lab_pin.sym} 950 70 2 0 {name=p29 sig_type=std_logic lab=b3}
 C {devices/lab_pin.sym} 1180 70 2 0 {name=p30 sig_type=std_logic lab=b2}
 C {devices/lab_pin.sym} 1410 70 2 0 {name=p31 sig_type=std_logic lab=b1}
 C {devices/lab_pin.sym} 1640 70 2 0 {name=p32 sig_type=std_logic lab=b0}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 100 140 3 0 {name=X13}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 220 140 3 0 {name=X14}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 330 140 3 0 {name=X11}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 450 140 3 0 {name=X12}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 560 140 3 0 {name=X9}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 680 140 3 0 {name=X10}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 790 140 3 0 {name=X7}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 910 140 3 0 {name=X8}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 1020 140 3 0 {name=X5}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 1140 140 3 0 {name=X6}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 1250 140 3 0 {name=X3}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 1370 140 3 0 {name=X4}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 1480 140 3 0 {name=X1}
+C {/home/madvlsi/current-output-dac-vlsi/schematics/mux.sym} 1600 140 3 0 {name=X2}
