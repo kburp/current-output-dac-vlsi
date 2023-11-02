@@ -91,8 +91,6 @@ N 620 -350 790 -350 {
 lab=VDD}
 N 790 -350 960 -350 {
 lab=VDD}
-N 960 -350 1130 -350 {
-lab=VDD}
 N 620 -370 620 -350 {
 lab=VDD}
 N 80 -200 80 -70 {
@@ -108,9 +106,9 @@ lab=#net12}
 N 930 -200 930 -70 {
 lab=#net13}
 N 1100 -200 1100 -70 {
-lab=b0}
-N -80 -290 -80 -230 {
 lab=#net14}
+N -80 -290 -80 -230 {
+lab=#net15}
 C {madvlsi/nmos3.sym} 110 -320 0 0 {name=M1
 L=\{L\}
 W=\{W\}
@@ -420,8 +418,6 @@ C {devices/lab_pin.sym} -240 -340 1 0 {name=p1 sig_type=std_logic lab=Vgate
 }
 C {devices/lab_pin.sym} 80 -320 0 0 {name=p2 sig_type=std_logic lab=Vgate
 }
-C {devices/lab_pin.sym} 1100 -70 2 0 {name=p4 sig_type=std_logic lab=b0
-}
 C {madvlsi/nmos3.sym} -80 -320 0 0 {name=M21
 L=\{L\}
 W=\{W\}
@@ -458,8 +454,150 @@ C {devices/lab_pin.sym} -110 -320 0 0 {name=p5 sig_type=std_logic lab=Vgate
 }
 C {devices/lab_pin.sym} -110 -200 0 0 {name=p3 sig_type=std_logic lab=Vbn
 }
-C {madvlsi/depvsrc.sym} 1100 30 0 0 {name=B0
-func=Vbn}
-C {devices/lab_pin.sym} 1100 0 2 0 {name=p6 sig_type=std_logic lab=b0
+C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1100 30 3 0 {name=X1}
+C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 930 30 3 0 {name=X2}
+C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 760 30 3 0 {name=X3}
+C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 590 30 3 0 {name=X4}
+C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 420 30 3 0 {name=X5}
+C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 250 30 3 0 {name=X6}
+C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 80 30 3 0 {name=X7}
+C {madvlsi/gnd.sym} 60 -10 0 0 {name=l3 lab=GND}
+C {madvlsi/gnd.sym} 230 -10 0 0 {name=l7 lab=GND}
+C {madvlsi/gnd.sym} 400 -10 0 0 {name=l8 lab=GND}
+C {madvlsi/gnd.sym} 570 -10 0 0 {name=l9 lab=GND}
+C {madvlsi/gnd.sym} 740 -10 0 0 {name=l10 lab=GND}
+C {madvlsi/gnd.sym} 910 -10 0 0 {name=l11 lab=GND}
+C {devices/lab_pin.sym} 100 -10 3 0 {name=p4 sig_type=std_logic lab=Vbn
 }
-C {madvlsi/gnd.sym} 1100 60 0 0 {name=l3 lab=GND}
+C {devices/lab_pin.sym} 270 -10 3 0 {name=p6 sig_type=std_logic lab=Vbn
+}
+C {devices/lab_pin.sym} 440 -10 3 0 {name=p7 sig_type=std_logic lab=Vbn
+}
+C {devices/lab_pin.sym} 610 -10 3 0 {name=p8 sig_type=std_logic lab=Vbn
+}
+C {devices/lab_pin.sym} 780 -10 3 0 {name=p9 sig_type=std_logic lab=Vbn
+}
+C {devices/lab_pin.sym} 950 -10 3 0 {name=p10 sig_type=std_logic lab=Vbn
+}
+C {devices/lab_pin.sym} 1120 -10 3 0 {name=p11 sig_type=std_logic lab=Vbn
+}
+C {madvlsi/gnd.sym} 1080 -10 0 0 {name=l12 lab=GND}
+C {devices/lab_pin.sym} 1140 -40 2 0 {name=p12 sig_type=std_logic lab=b0
+}
+C {devices/lab_pin.sym} 970 -40 2 0 {name=p13 sig_type=std_logic lab=b1
+}
+C {devices/lab_pin.sym} 800 -40 2 0 {name=p14 sig_type=std_logic lab=b2
+}
+C {devices/lab_pin.sym} 630 -40 2 0 {name=p15 sig_type=std_logic lab=b3}
+C {devices/lab_pin.sym} 460 -40 2 0 {name=p16 sig_type=std_logic lab=b4}
+C {devices/lab_pin.sym} 290 -40 2 0 {name=p17 sig_type=std_logic lab=b5}
+C {devices/lab_pin.sym} 120 -40 2 0 {name=p18 sig_type=std_logic lab=b6}
+C {madvlsi/vsource.sym} 1140 90 0 0 {name=V0
+value=1.8}
+C {madvlsi/gnd.sym} 1140 120 0 0 {name=l13 lab=GND}
+C {madvlsi/vsource.sym} 970 90 0 0 {name=V1
+value=1.8}
+C {madvlsi/gnd.sym} 970 120 0 0 {name=l14 lab=GND}
+C {madvlsi/vsource.sym} 800 90 0 0 {name=V2
+value=1.8}
+C {madvlsi/gnd.sym} 800 120 0 0 {name=l15 lab=GND}
+C {madvlsi/vsource.sym} 630 90 0 0 {name=V3
+value=1.8}
+C {madvlsi/gnd.sym} 630 120 0 0 {name=l16 lab=GND}
+C {madvlsi/vsource.sym} 460 90 0 0 {name=V4
+value=1.8}
+C {madvlsi/gnd.sym} 460 120 0 0 {name=l17 lab=GND}
+C {madvlsi/vsource.sym} 290 90 0 0 {name=V5
+value=1.8}
+C {madvlsi/gnd.sym} 290 120 0 0 {name=l18 lab=GND}
+C {madvlsi/vsource.sym} 120 90 0 0 {name=V6
+value=1.8}
+C {madvlsi/gnd.sym} 120 120 0 0 {name=l19 lab=GND}
+C {devices/lab_pin.sym} 120 60 2 0 {name=p19 sig_type=std_logic lab=b6}
+C {devices/lab_pin.sym} 290 60 2 0 {name=p20 sig_type=std_logic lab=b5}
+C {devices/lab_pin.sym} 460 60 2 0 {name=p21 sig_type=std_logic lab=b4}
+C {devices/lab_pin.sym} 630 60 2 0 {name=p22 sig_type=std_logic lab=b3}
+C {devices/lab_pin.sym} 800 60 2 0 {name=p23 sig_type=std_logic lab=b2
+}
+C {devices/lab_pin.sym} 970 60 2 0 {name=p24 sig_type=std_logic lab=b1
+}
+C {devices/lab_pin.sym} 1140 60 2 0 {name=p25 sig_type=std_logic lab=b0
+}
+C {madvlsi/ammeter2.sym} 1130 -360 0 0 {name=Vout}
+C {madvlsi/vsource.sym} -240 -170 0 0 {name=VDD
+value=1.8}
+C {madvlsi/gnd.sym} -240 -140 0 0 {name=l20 lab=GND}
+C {madvlsi/vdd.sym} -240 -200 0 0 {name=l21 lab=VDD}
+C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=1
+.param L=8
+.control
+set wr_vecnames
+set wr_singlescale
+let code = 0
+  while code < 128
+    if code eq 0
+      let b0 = 0
+    else
+      let b0 = code % 2
+    end
+    if floor(code / 2) eq 0
+      let b1 = 0
+    else
+      let b1 = floor(code / 2) % 2
+    end
+    if floor(code / 4) eq 0
+      let b2 = 0
+    else
+      let b2 = floor(code / 4) % 2
+    end
+    if floor(code / 8) eq 0
+      let b3 = 0
+    else
+      let b3 = floor(code / 8) % 2
+    end
+    if floor(code / 16) eq 0
+      let b4 = 0
+    else 
+      let b4 = floor(code / 16) % 2
+    end
+    if floor(code / 32) eq 0
+      let b5 = 0
+    else
+      let b5 = floor(code / 32) % 2
+    end
+    if floor(code / 64) eq 0
+      let b6 = 0
+    else
+      let b6 = floor(code / 64) % 2
+    end
+    alter vb0 $&b0
+    alter vb1 $&b1
+    alter vb2 $&b2
+    alter vb3 $&b3
+    alter vb4 $&b4
+    alter vb5 $&b5
+    alter vb6 $&b6
+    save all
+    op
+    wrdata ~/Documents/current-output-dac-vlsi/simulations/dac_inf_sim.txt i(Vout)
+    if code eq 0
+      set appendwrite
+      set wr_vecnames = FALSE
+    end
+    let code = code + 1
+  end
+  quit
+.endc"}
+C {madvlsi/tt_models.sym} -150 -40 0 0 {
+name=TT_MODELS
+only_toplevel=false
+value=".option wnflag=1
+.param MC_SWITCH=0.0
+.lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
+}
+C {madvlsi/vsource.sym} -320 -310 0 0 {name=Vbn
+value=0.4}
+C {madvlsi/gnd.sym} -320 -280 0 0 {name=l22 lab=GND}
+C {devices/lab_pin.sym} -320 -340 1 0 {name=p26 sig_type=std_logic lab=Vbn
+}
+C {madvlsi/vdd.sym} 1130 -360 0 0 {name=l23 lab=VDD}
