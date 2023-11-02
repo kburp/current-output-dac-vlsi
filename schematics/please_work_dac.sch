@@ -107,8 +107,6 @@ N 930 -200 930 -70 {
 lab=#net13}
 N 1100 -200 1100 -70 {
 lab=#net14}
-N -80 -290 -80 -230 {
-lab=#net15}
 C {madvlsi/nmos3.sym} 110 -320 0 0 {name=M1
 L=\{L\}
 W=\{W\}
@@ -418,42 +416,6 @@ C {devices/lab_pin.sym} -240 -340 1 0 {name=p1 sig_type=std_logic lab=Vgate
 }
 C {devices/lab_pin.sym} 80 -320 0 0 {name=p2 sig_type=std_logic lab=Vgate
 }
-C {madvlsi/nmos3.sym} -80 -320 0 0 {name=M21
-L=\{L\}
-W=\{W\}
-body=GND
-nf=1
-mult=2
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/nmos3.sym} -80 -200 0 0 {name=M22
-L=\{L\}
-W=\{W\}
-body=GND
-nf=1
-mult=1
-ad="'int((nf+1)/2) * W/nf * 0.29'" 
-pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
-as="'int((nf+2)/2) * W/nf * 0.29'" 
-ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
-nrd="'0.29 / W'" nrs="'0.29 / W'"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {madvlsi/vdd.sym} -80 -350 0 0 {name=l4 lab=VDD}
-C {madvlsi/gnd.sym} -80 -170 0 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} -110 -320 0 0 {name=p5 sig_type=std_logic lab=Vgate
-}
-C {devices/lab_pin.sym} -110 -200 0 0 {name=p3 sig_type=std_logic lab=Vbn
-}
 C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1100 30 3 0 {name=X1}
 C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 930 30 3 0 {name=X2}
 C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 760 30 3 0 {name=X3}
@@ -482,16 +444,16 @@ C {devices/lab_pin.sym} 950 -10 3 0 {name=p10 sig_type=std_logic lab=Vbn
 C {devices/lab_pin.sym} 1120 -10 3 0 {name=p11 sig_type=std_logic lab=Vbn
 }
 C {madvlsi/gnd.sym} 1080 -10 0 0 {name=l12 lab=GND}
-C {devices/lab_pin.sym} 1140 -40 2 0 {name=p12 sig_type=std_logic lab=b0
+C {devices/lab_pin.sym} 120 -40 2 0 {name=p12 sig_type=std_logic lab=b0
 }
-C {devices/lab_pin.sym} 970 -40 2 0 {name=p13 sig_type=std_logic lab=b1
+C {devices/lab_pin.sym} 290 -40 2 0 {name=p13 sig_type=std_logic lab=b1
 }
-C {devices/lab_pin.sym} 800 -40 2 0 {name=p14 sig_type=std_logic lab=b2
+C {devices/lab_pin.sym} 460 -40 2 0 {name=p14 sig_type=std_logic lab=b2
 }
 C {devices/lab_pin.sym} 630 -40 2 0 {name=p15 sig_type=std_logic lab=b3}
-C {devices/lab_pin.sym} 460 -40 2 0 {name=p16 sig_type=std_logic lab=b4}
-C {devices/lab_pin.sym} 290 -40 2 0 {name=p17 sig_type=std_logic lab=b5}
-C {devices/lab_pin.sym} 120 -40 2 0 {name=p18 sig_type=std_logic lab=b6}
+C {devices/lab_pin.sym} 800 -40 2 0 {name=p16 sig_type=std_logic lab=b4}
+C {devices/lab_pin.sym} 970 -40 2 0 {name=p17 sig_type=std_logic lab=b5}
+C {devices/lab_pin.sym} 1140 -40 2 0 {name=p18 sig_type=std_logic lab=b6}
 C {madvlsi/vsource.sym} 1140 90 0 0 {name=V0
 value=1.8}
 C {madvlsi/gnd.sym} 1140 120 0 0 {name=l13 lab=GND}
@@ -513,15 +475,15 @@ C {madvlsi/gnd.sym} 290 120 0 0 {name=l18 lab=GND}
 C {madvlsi/vsource.sym} 120 90 0 0 {name=V6
 value=1.8}
 C {madvlsi/gnd.sym} 120 120 0 0 {name=l19 lab=GND}
-C {devices/lab_pin.sym} 120 60 2 0 {name=p19 sig_type=std_logic lab=b6}
-C {devices/lab_pin.sym} 290 60 2 0 {name=p20 sig_type=std_logic lab=b5}
-C {devices/lab_pin.sym} 460 60 2 0 {name=p21 sig_type=std_logic lab=b4}
+C {devices/lab_pin.sym} 1140 60 2 0 {name=p19 sig_type=std_logic lab=b6}
+C {devices/lab_pin.sym} 970 60 2 0 {name=p20 sig_type=std_logic lab=b5}
+C {devices/lab_pin.sym} 800 60 2 0 {name=p21 sig_type=std_logic lab=b4}
 C {devices/lab_pin.sym} 630 60 2 0 {name=p22 sig_type=std_logic lab=b3}
-C {devices/lab_pin.sym} 800 60 2 0 {name=p23 sig_type=std_logic lab=b2
+C {devices/lab_pin.sym} 460 60 2 0 {name=p23 sig_type=std_logic lab=b2
 }
-C {devices/lab_pin.sym} 970 60 2 0 {name=p24 sig_type=std_logic lab=b1
+C {devices/lab_pin.sym} 290 60 2 0 {name=p24 sig_type=std_logic lab=b1
 }
-C {devices/lab_pin.sym} 1140 60 2 0 {name=p25 sig_type=std_logic lab=b0
+C {devices/lab_pin.sym} 120 60 2 0 {name=p25 sig_type=std_logic lab=b0
 }
 C {madvlsi/ammeter2.sym} 1130 -360 0 0 {name=Vout}
 C {madvlsi/vsource.sym} -240 -170 0 0 {name=VDD
@@ -570,16 +532,16 @@ let code = 0
     else
       let b6 = floor(code / 64) % 2
     end
-    alter vb0 $&b0
-    alter vb1 $&b1
-    alter vb2 $&b2
-    alter vb3 $&b3
-    alter vb4 $&b4
-    alter vb5 $&b5
-    alter vb6 $&b6
+    alter v0 $&b0
+    alter v1 $&b1
+    alter v2 $&b2
+    alter v3 $&b3
+    alter v4 $&b4
+    alter v5 $&b5
+    alter v6 $&b6
     save all
     op
-    wrdata ~/Documents/current-output-dac-vlsi/simulations/dac_inf_sim.txt i(Vout)
+    wrdata ~/Documents/current-output-dac-vlsi/simulations/dac_inf_sim.txt i(Vout) v(b5) v(b6)
     if code eq 0
       set appendwrite
       set wr_vecnames = FALSE
