@@ -8,49 +8,49 @@ E {}
 N 110 -290 180 -290 {
 lab=#net1}
 N 80 -320 210 -320 {
-lab=Vgate}
+lab=VDD}
 N 210 -320 250 -320 {
-lab=Vgate}
+lab=VDD}
 N 240 -290 280 -290 {
 lab=#net2}
 N 280 -290 350 -290 {
 lab=#net2}
 N 250 -320 380 -320 {
-lab=Vgate}
+lab=VDD}
 N 380 -320 420 -320 {
-lab=Vgate}
+lab=VDD}
 N 410 -290 450 -290 {
 lab=#net3}
 N 450 -290 520 -290 {
 lab=#net3}
 N 420 -320 550 -320 {
-lab=Vgate}
+lab=VDD}
 N 550 -320 590 -320 {
-lab=Vgate}
+lab=VDD}
 N 580 -290 620 -290 {
 lab=#net4}
 N 620 -290 690 -290 {
 lab=#net4}
 N 590 -320 720 -320 {
-lab=Vgate}
+lab=VDD}
 N 720 -320 760 -320 {
-lab=Vgate}
+lab=VDD}
 N 750 -290 790 -290 {
 lab=#net5}
 N 790 -290 860 -290 {
 lab=#net5}
 N 760 -320 890 -320 {
-lab=Vgate}
+lab=VDD}
 N 890 -320 930 -320 {
-lab=Vgate}
+lab=VDD}
 N 920 -290 960 -290 {
 lab=#net6}
 N 960 -290 1030 -290 {
 lab=#net6}
 N 930 -320 1060 -320 {
-lab=Vgate}
+lab=VDD}
 N 1060 -320 1100 -320 {
-lab=Vgate}
+lab=VDD}
 N 1090 -290 1130 -290 {
 lab=#net7}
 N 110 -290 110 -230 {
@@ -107,6 +107,12 @@ N 930 -200 930 -70 {
 lab=#net13}
 N 1100 -200 1100 -70 {
 lab=#net14}
+N -170 -230 -130 -230 {
+lab=Vbn}
+N 80 -350 80 -320 {
+lab=VDD}
+N 80 -350 110 -350 {
+lab=VDD}
 C {madvlsi/nmos3.sym} 110 -320 0 0 {name=M1
 L=\{L\}
 W=\{W\}
@@ -409,12 +415,10 @@ spiceprefix=X
 }
 C {madvlsi/gnd.sym} 620 -150 0 0 {name=l1 lab=GND}
 C {madvlsi/vdd.sym} 620 -370 0 0 {name=l2 lab=VDD}
-C {madvlsi/vsource.sym} -240 -310 0 0 {name=Vgate
-value=0.8}
-C {madvlsi/gnd.sym} -240 -280 0 0 {name=l5 lab=GND}
-C {devices/lab_pin.sym} -240 -340 1 0 {name=p1 sig_type=std_logic lab=Vgate
-}
-C {devices/lab_pin.sym} 80 -320 0 0 {name=p2 sig_type=std_logic lab=Vgate
+C {madvlsi/vsource.sym} -310 -310 0 0 {name=Vgate
+value=1.2}
+C {madvlsi/gnd.sym} -310 -280 0 0 {name=l5 lab=GND}
+C {devices/lab_pin.sym} -310 -340 1 0 {name=p1 sig_type=std_logic lab=Vgate
 }
 C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1100 30 3 0 {name=X1}
 C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 930 30 3 0 {name=X2}
@@ -486,12 +490,12 @@ C {devices/lab_pin.sym} 290 60 2 0 {name=p24 sig_type=std_logic lab=b1
 C {devices/lab_pin.sym} 120 60 2 0 {name=p25 sig_type=std_logic lab=b0
 }
 C {madvlsi/ammeter2.sym} 1130 -360 0 0 {name=Vout}
-C {madvlsi/vsource.sym} -240 -170 0 0 {name=VDD
+C {madvlsi/vsource.sym} -310 -170 0 0 {name=VDD
 value=1.8}
-C {madvlsi/gnd.sym} -240 -140 0 0 {name=l20 lab=GND}
-C {madvlsi/vdd.sym} -240 -200 0 0 {name=l21 lab=VDD}
+C {madvlsi/gnd.sym} -310 -140 0 0 {name=l20 lab=GND}
+C {madvlsi/vdd.sym} -310 -200 0 0 {name=l21 lab=VDD}
 C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=1
-.param L=8
+.param L=0.5
 .control
 set wr_vecnames
 set wr_singlescale
@@ -557,9 +561,9 @@ value=".option wnflag=1
 .param MC_SWITCH=0.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
-C {madvlsi/vsource.sym} -320 -310 0 0 {name=Vbn
-value=0.4}
-C {madvlsi/gnd.sym} -320 -280 0 0 {name=l22 lab=GND}
-C {devices/lab_pin.sym} -320 -340 1 0 {name=p26 sig_type=std_logic lab=Vbn
-}
 C {madvlsi/vdd.sym} 1130 -360 0 0 {name=l23 lab=VDD}
+C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/bias_generator.sym} -310 -130 0 0 {name=X8}
+C {madvlsi/gnd.sym} -190 -200 0 0 {name=l4 lab=GND}
+C {madvlsi/vdd.sym} -190 -260 0 0 {name=l6 lab=VDD}
+C {devices/lab_pin.sym} -130 -230 3 0 {name=p3 sig_type=std_logic lab=Vbn
+}
