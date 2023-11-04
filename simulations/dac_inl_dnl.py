@@ -4,11 +4,11 @@ import numpy as np
 import pandas as pd
 
 # Load the data into a DataFrame
-file_path = 'dac_paper_sim.txt'  # Replace this with the actual file path
+file_path = 'dac_sim.txt'  # Replace this with the actual file path
 df = pd.read_csv(file_path, delim_whitespace=True)
 
 # Initialize a list to hold the i(viout) values from the DataFrame
-i_viout_values = df['i(vout)'].to_numpy()
+i_viout_values = df['i(Vout)'].to_numpy()
 
 # Sort the i(viout) values
 i_viout_values.sort()
