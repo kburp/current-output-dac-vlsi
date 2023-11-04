@@ -10,8 +10,6 @@ df = pd.read_csv(file_path, delim_whitespace=True)
 # Initialize a list to hold the i(viout) values from the DataFrame
 i_viout_values = df['i(Vout)'].to_numpy()
 
-# Sort the i(viout) values
-i_viout_values.sort()
 
 # Number of bits (replace with actual value)
 n_bits = 7
@@ -29,7 +27,7 @@ dnl = (actual_step_sizes - ideal_step_size) / ideal_step_size
 # Create a plot of DNL
 plt.figure(figsize=(12, 6))
 plt.plot(dnl, marker='o', linestyle='-', color='b')
-plt.title("DNL of the DAC (Adjusted Method)")
+plt.title("DNL of the DAC")
 plt.xlabel("Step Index")
 plt.ylabel("DNL (in LSBs)")
 plt.grid(True)
@@ -42,7 +40,7 @@ inl = (i_viout_values - ideal_current) / ideal_step_size
 # Create a plot of INL
 plt.figure(figsize=(12, 6))
 plt.plot(inl, marker='o', linestyle='-', color='g')
-plt.title("INL of the DAC (Adjusted Method)")
+plt.title("INL of the DAC")
 plt.xlabel("Step Index")
 plt.ylabel("INL (in LSBs)")
 plt.grid(True)

@@ -652,8 +652,8 @@ C {madvlsi/vsource.sym} -310 -170 0 0 {name=VDD
 value=1.8}
 C {madvlsi/gnd.sym} -310 -140 0 0 {name=l20 lab=GND}
 C {madvlsi/vdd.sym} -310 -200 0 0 {name=l21 lab=VDD}
-C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=1
-.param L=4
+C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=32
+.param L=2
 .control
 set wr_vecnames
 set wr_singlescale
@@ -715,7 +715,7 @@ C {madvlsi/tt_models.sym} -150 -40 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
-.param MC_SWITCH=0.0
+.param MC_SWITCH=1.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {madvlsi/pmos3.sym} 1450 -540 0 0 {name=M33
@@ -842,7 +842,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/resistor.sym} -890 0 0 0 {name=R3
-value=400k
+value=700k
 m=1}
 C {madvlsi/nmos3.sym} -770 -60 0 0 {name=M23
 L=\{L\}
