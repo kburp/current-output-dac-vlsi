@@ -25,10 +25,14 @@ N 810 -250 810 -230 {
 lab=Y}
 N 810 -240 900 -240 {
 lab=Y}
-N 730 -280 780 -280 {}
-N 610 -280 610 -150 {}
-N 610 -150 780 -150 {}
-N 780 -200 780 -150 {}
+N 730 -280 780 -280 {
+lab=#net1}
+N 610 -280 610 -150 {
+lab=S}
+N 610 -150 780 -150 {
+lab=S}
+N 780 -200 780 -150 {
+lab=S}
 C {madvlsi/nmos3.sym} 670 -240 0 0 {name=M1
 L=0.15
 W=1
@@ -62,7 +66,7 @@ spiceprefix=X
 C {devices/ipin.sym} 580 -280 0 0 {name=p1 lab=S}
 C {devices/ipin.sym} 810 -310 1 0 {name=p2 lab=A}
 C {devices/opin.sym} 900 -240 0 0 {name=p3 lab=Y}
-C {devices/ipin.sym} 810 -170 3 0 {name=p4 lab=B}
+C {devices/ipin.sym} 810 -170 0 0 {name=p4 lab=B}
 C {madvlsi/vdd.sym} 670 -350 0 0 {name=l1 lab=VDD}
 C {madvlsi/gnd.sym} 670 -210 0 0 {name=l2 lab=GND}
 C {madvlsi/nmos3.sym} 810 -200 0 0 {name=M3
