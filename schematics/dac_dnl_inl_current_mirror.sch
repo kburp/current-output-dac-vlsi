@@ -180,17 +180,17 @@ lab=#net19}
 N -770 -100 -770 -90 {
 lab=#net19}
 N -550 -120 -550 -90 {
-lab=Vbiasout}
+lab=Vbn}
 N -590 -100 -550 -100 {
-lab=Vbiasout}
+lab=Vbn}
 N -590 -100 -590 -60 {
-lab=Vbiasout}
+lab=Vbn}
 N -590 -60 -580 -60 {
-lab=Vbiasout}
+lab=Vbn}
 N -670 -110 -670 -90 {
 lab=#net20}
 N -640 -60 -590 -60 {
-lab=Vbiasout}
+lab=Vbn}
 N -890 -120 -890 -90 {
 lab=#net21}
 N -890 -100 -850 -100 {
@@ -212,7 +212,7 @@ lab=GND}
 N -550 20 -550 30 {
 lab=GND}
 N -550 -100 -540 -100 {
-lab=Vbiasout}
+lab=Vbn}
 N -890 40 -770 40 {
 lab=GND}
 N -770 40 -670 40 {
@@ -699,7 +699,7 @@ let code = 0
     alter v6 $&b6
     save all
     op
-    wrdata ~/Documents/current-output-dac-vlsi/simulations/dac_sim.txt v(Vbn) v(Vbiasout) i(Vout) i(Vout1) v(b6) v(b5) v(b4) v(b3) v(b2) v(b1) v(b0) v(b0out) v(b1out) v(b6out)
+    wrdata ~/Documents/current-output-dac-vlsi/simulations/dac_sim.txt v(Vbn) i(Vout) i(Vout1) v(b6) v(b5) v(b4) v(b3) v(b2) v(b1) v(b0) v(b0out) v(b1out) v(b6out)
     if code eq 0
       set appendwrite
       set wr_vecnames = FALSE
@@ -932,8 +932,6 @@ spiceprefix=X
 }
 C {madvlsi/gnd.sym} -720 40 0 0 {name=l5 lab=GND}
 C {madvlsi/vdd.sym} -750 -190 0 0 {name=l23 lab=VDD}
-C {devices/lab_pin.sym} -540 -100 2 0 {name=p2 sig_type=std_logic lab=Vbiasout
-}
 C {madvlsi/pmos3.sym} 620 -400 0 0 {name=M29
 L=\{L\}
 W=\{W\}
@@ -1025,10 +1023,7 @@ C {/home/madvlsi/Documents/current-output-dac-vlsi/schematics/mux.sym} 1100 30 3
 C {devices/lab_pin.sym} 80 -120 0 0 {name=p5 sig_type=std_logic lab=b0out}
 C {devices/lab_pin.sym} 1100 -110 0 0 {name=p26 sig_type=std_logic lab=b6out
 }
-C {madvlsi/depvsrc.sym} -430 -40 0 0 {name=B1
-func=v(Vbiasout)}
-C {madvlsi/gnd.sym} -430 -10 0 0 {name=l24 lab=GND}
-C {devices/lab_pin.sym} -430 -70 2 0 {name=p27 sig_type=std_logic lab=Vbn
+C {devices/lab_pin.sym} -540 -100 2 0 {name=p27 sig_type=std_logic lab=Vbn
 }
 C {madvlsi/ammeter2.sym} 1130 -370 0 0 {name=Vout1}
 C {devices/lab_pin.sym} 250 -120 0 0 {name=p28 sig_type=std_logic lab=b1out}
