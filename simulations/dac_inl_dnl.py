@@ -32,7 +32,7 @@ plt.xlabel("Step Index")
 plt.ylabel("DNL (in LSBs)")
 plt.grid(True)
 
-# Calculate the INL using the sorted i(viout) values and the ideal step size
+# Calculate the INL using the sorted i(vout) values and the ideal step size
 x_values = np.arange(len(i_viout_values))
 ideal_current = x_values * ideal_step_size + i_viout_values[0]
 inl = (i_viout_values - ideal_current) / ideal_step_size
@@ -44,6 +44,13 @@ plt.title("INL of the DAC")
 plt.xlabel("Step Index")
 plt.ylabel("INL (in LSBs)")
 plt.grid(True)
+
+# Create plot of digital input vs current output
+plt.figure(figsize=(12, 6))
+plt.plot(range(128), i_viout_values, marker='o', linestyle='-')
+plt.title("DAC Transfer Characteristic")
+plt.xlabel("Digital Input")
+plt.ylabel("Current Output (A)")
 
 # Show the plots
 plt.show()
