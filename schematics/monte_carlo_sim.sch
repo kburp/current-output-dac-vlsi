@@ -652,70 +652,78 @@ C {madvlsi/vsource.sym} -310 -170 0 0 {name=VDD
 value=1.8}
 C {madvlsi/gnd.sym} -310 -140 0 0 {name=l20 lab=GND}
 C {madvlsi/vdd.sym} -310 -200 0 0 {name=l21 lab=VDD}
-C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=3
-.param L=0.5
+C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=32
+.param L=8
 .control
-set wr_vecnames
-set wr_singlescale
-let code = 0
-  while code < 128
-    if code eq 0
-      let b0 = 0
-    else
-      let b0 = code % 2 * 1.8
+  set wr_singlescale
+  let runs = 2
+  let run = 1
+  while run <= runs
+    set appendwrite = FALSE
+    set wr_vecnames
+    let code = 0
+    while code < 128
+      if code eq 0
+        let b0 = 0
+      else
+        let b0 = code % 2 * 1.8
+      end
+      if floor(code / 2) eq 0
+        let b1 = 0
+      else
+        let b1 = floor(code / 2) % 2 * 1.8
+      end
+      if floor(code / 4) eq 0
+        let b2 = 0
+      else
+        let b2 = floor(code / 4) % 2 * 1.8
+      end
+      if floor(code / 8) eq 0
+        let b3 = 0
+      else
+        let b3 = floor(code / 8) % 2 * 1.8
+      end
+      if floor(code / 16) eq 0
+        let b4 = 0
+      else 
+        let b4 = floor(code / 16) % 2 * 1.8
+      end
+      if floor(code / 32) eq 0
+        let b5 = 0
+      else
+        let b5 = floor(code / 32) % 2 * 1.8
+      end
+      if floor(code / 64) eq 0
+        let b6 = 0
+      else
+        let b6 = floor(code / 64) % 2 * 1.8
+      end
+      alter v0 $&b0
+      alter v1 $&b1
+      alter v2 $&b2
+      alter v3 $&b3
+      alter v4 $&b4
+      alter v5 $&b5
+      alter v6 $&b6
+      save all
+      op
+      wrdata ~/Documents/current-output-dac-vlsi/simulations/\{$&run\\\}.txt v(Vbn) i(Vout) i(Vout1) v(b6) v(b5) v(b4) v(b3) v(b2) v(b1) v(b0) v(b0out) v(b1out) v(b6out)
+      if code eq 0
+        set appendwrite
+        set wr_vecnames = FALSE
+      end
+      let code = code + 1
     end
-    if floor(code / 2) eq 0
-      let b1 = 0
-    else
-      let b1 = floor(code / 2) % 2 * 1.8
-    end
-    if floor(code / 4) eq 0
-      let b2 = 0
-    else
-      let b2 = floor(code / 4) % 2 * 1.8
-    end
-    if floor(code / 8) eq 0
-      let b3 = 0
-    else
-      let b3 = floor(code / 8) % 2 * 1.8
-    end
-    if floor(code / 16) eq 0
-      let b4 = 0
-    else 
-      let b4 = floor(code / 16) % 2 * 1.8
-    end
-    if floor(code / 32) eq 0
-      let b5 = 0
-    else
-      let b5 = floor(code / 32) % 2 * 1.8
-    end
-    if floor(code / 64) eq 0
-      let b6 = 0
-    else
-      let b6 = floor(code / 64) % 2 * 1.8
-    end
-    alter v0 $&b0
-    alter v1 $&b1
-    alter v2 $&b2
-    alter v3 $&b3
-    alter v4 $&b4
-    alter v5 $&b5
-    alter v6 $&b6
-    save all
-    op
-    wrdata ~/Documents/current-output-dac-vlsi/simulations/dac_sim.txt v(Vbn) i(Vout) i(Vout1) v(b6) v(b5) v(b4) v(b3) v(b2) v(b1) v(b0) v(b0out) v(b1out) v(b6out)
-    if code eq 0
-      set appendwrite
-      set wr_vecnames = FALSE
-    end
-    let code = code + 1
+    reset
+    let run = run + 1
   end
+  quit
 .endc"}
 C {madvlsi/tt_models.sym} -150 -40 0 0 {
 name=TT_MODELS
 only_toplevel=false
 value=".option wnflag=1
-.param MC_SWITCH=0.0
+.param MC_SWITCH=1.0
 .lib ~/skywater/skywater-pdk/libraries/sky130_fd_pr_ngspice/latest/models/sky130.lib.spice tt"
 }
 C {madvlsi/pmos3.sym} 1450 -540 0 0 {name=M33
