@@ -652,13 +652,8 @@ C {madvlsi/vsource.sym} -310 -170 0 0 {name=VDD
 value=1.8}
 C {madvlsi/gnd.sym} -310 -140 0 0 {name=l20 lab=GND}
 C {madvlsi/vdd.sym} -310 -200 0 0 {name=l21 lab=VDD}
-<<<<<<< HEAD
-C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=3
-.param L=0.5
-=======
-C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=32
-.param L=2
->>>>>>> 31ebf40cd97e65358d704222af846806dc1668f8
+C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=36
+.param L=4
 .control
 set wr_vecnames
 set wr_singlescale
@@ -715,6 +710,7 @@ let code = 0
     end
     let code = code + 1
   end
+  quit
 .endc"}
 C {madvlsi/tt_models.sym} -150 -40 0 0 {
 name=TT_MODELS
