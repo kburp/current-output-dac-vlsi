@@ -361,8 +361,6 @@ N 2100 210 2220 210 {
 lab=#net41}
 N 2250 160 2250 180 {
 lab=#net42}
-N 2250 170 2390 170 {
-lab=#net42}
 N 2130 80 2130 90 {
 lab=#net4}
 N 2250 80 2250 100 {
@@ -401,11 +399,21 @@ N 1990 -40 1990 0 {
 lab=#net41}
 N 1990 -50 1990 -40 {
 lab=#net41}
-N 2360 50 2360 130 {
+N 2450 10 2450 90 {
 lab=Vbp}
-N 2390 80 2390 100 {
+N 2480 40 2480 60 {
 lab=#net45}
-N 2390 160 2390 170 {
+N 2480 120 2480 130 {
+lab=#net46}
+N 2430 150 2480 150 {
+lab=#net46}
+N 2480 130 2480 150 {
+lab=#net46}
+N 2400 120 2440 120 {
+lab=#net46}
+N 2440 120 2440 150 {
+lab=#net46}
+N 2250 180 2400 180 {
 lab=#net42}
 C {madvlsi/nmos3.sym} 130 -180 0 0 {name=M1
 L=\{L\}
@@ -1297,8 +1305,8 @@ C {devices/lab_pin.sym} -260 -270 0 0 {name=p9 sig_type=std_logic lab=Iin}
 C {devices/lab_pin.sym} -420 170 2 0 {name=p11 sig_type=std_logic lab=Vbn
 }
 C {madvlsi/nmos3.sym} 2130 210 0 0 {name=M48
-L=0.15
-W=1
+L=\{L\}
+W=\{W\}
 body=GND
 nf=1
 mult=1
@@ -1312,8 +1320,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 2250 210 0 0 {name=M49
-L=0.15
-W=1
+L=\{L\}
+W=\{W\}
 body=GND
 nf=1
 mult=1
@@ -1327,8 +1335,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 2250 130 0 0 {name=M50
-L=0.15
-W=1
+L=\{L\}
+W=\{W\}
 body=GND
 nf=1
 mult=1
@@ -1342,8 +1350,8 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 2130 130 2 0 {name=M51
-L=0.15
-W=1
+L=\{L\}
+W=\{W\}
 body=GND
 nf=1
 mult=1
@@ -1357,11 +1365,11 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {madvlsi/nmos3.sym} 1990 130 0 0 {name=M52
-L=0.15
-W=1
+L=\{L\}
+W=\{W\}
 body=GND
 nf=1
-mult=1
+mult=4
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -1407,7 +1415,7 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1960 -110 0 0 {name=p13 sig_type=std_logic lab=Vbp}
 C {madvlsi/vdd.sym} 1990 -190 0 0 {name=l1 lab=VDD}
-C {madvlsi/pmos3.sym} 2390 130 0 0 {name=M55
+C {madvlsi/pmos3.sym} 2480 90 0 0 {name=M55
 L=\{L\}
 W=\{W\}
 body=VDD
@@ -1422,7 +1430,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {madvlsi/pmos3.sym} 2390 50 0 0 {name=M56
+C {madvlsi/pmos3.sym} 2480 10 0 0 {name=M56
 L=\{L\}
 W=\{W\}
 body=VDD
@@ -1437,5 +1445,20 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 2360 100 0 0 {name=p14 sig_type=std_logic lab=Vbp}
-C {madvlsi/vdd.sym} 2390 20 0 0 {name=l46 lab=VDD}
+C {devices/lab_pin.sym} 2450 60 0 0 {name=p14 sig_type=std_logic lab=Vbp}
+C {madvlsi/vdd.sym} 2480 -20 0 0 {name=l46 lab=VDD}
+C {madvlsi/nmos3.sym} 2400 150 2 0 {name=M67
+L=\{L\}
+W=\{W\}
+body=GND
+nf=1
+mult=4
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
