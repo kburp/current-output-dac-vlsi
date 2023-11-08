@@ -652,8 +652,8 @@ C {madvlsi/vsource.sym} -310 -170 0 0 {name=VDD
 value=1.8}
 C {madvlsi/gnd.sym} -310 -140 0 0 {name=l20 lab=GND}
 C {madvlsi/vdd.sym} -310 -200 0 0 {name=l21 lab=VDD}
-C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=36
-.param L=4
+C {devices/code.sym} -270 -40 0 0 {name=SPICE only_toplevel=false value=".param W=24
+.param L=1
 .control
 set wr_vecnames
 set wr_singlescale
