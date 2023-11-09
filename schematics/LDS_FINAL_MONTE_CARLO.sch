@@ -575,18 +575,10 @@ N 3940 -1320 3940 -1220 {
 lab=VDD}
 N 3460 -1320 3460 -1220 {
 lab=VDD}
-N 3050 -1220 3050 -1160 {
-lab=#net16}
 N 3070 -1220 3070 -1160 {
 lab=#net17}
-N 3870 -1220 3870 -1160 {
-lab=#net16}
 N 2900 -1220 2900 -1160 {
 lab=#net15}
-N 3050 -1160 3050 -1140 {
-lab=#net16}
-N 3870 -1160 3870 -1140 {
-lab=#net16}
 N 2900 -1160 2900 -1120 {
 lab=#net15}
 N 4020 -1220 4020 -1120 {
@@ -627,8 +619,6 @@ N 3850 -1220 3850 -1160 {
 lab=#net17}
 N 3070 -1160 3850 -1160 {
 lab=#net17}
-N 3050 -1140 3870 -1140 {
-lab=#net16}
 N 2900 -1120 4020 -1120 {
 lab=#net15}
 N 2980 -1320 3940 -1320 {
@@ -1091,6 +1081,10 @@ N -60 -1220 -60 -1160 {
 lab=#net11}
 N 20 -1220 20 -1180 {
 lab=#net5}
+N 3050 -1220 3050 -1180 {
+lab=#net16}
+N 3870 -1220 3870 -1180 {
+lab=#net16}
 C {madvlsi/vsource.sym} 260 -690 0 0 {name=V0
 value=1.8}
 C {madvlsi/gnd.sym} 1280 -660 0 0 {name=l13 lab=GND}
@@ -3107,8 +3101,8 @@ C {devices/lab_pin.sym} 1910 -1320 0 0 {name=p18 sig_type=std_logic lab=b0out}
 C {devices/lab_pin.sym} 1990 -1320 0 0 {name=p26 sig_type=std_logic lab=b1out}
 C {devices/lab_pin.sym} 1910 -950 0 0 {name=p28 sig_type=std_logic lab=b6out
 }
-C {devices/code.sym} -240 -720 0 0 {name=SPICE only_toplevel=false value=".param W=32
-.param L=8
+C {devices/code.sym} -240 -720 0 0 {name=SPICE only_toplevel=false value=".param W=24
+.param L=1
 .control
   set wr_singlescale
   let runs = 2
