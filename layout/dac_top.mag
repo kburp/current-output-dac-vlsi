@@ -1,0 +1,16 @@
+magic
+tech sky130A
+timestamp 1699634252
+use big  big_0
+timestamp 1699632857
+transform 1 0 275 0 1 1565
+box -275 -1545 5375 1255
+use cascode_biasgen  cascode_biasgen_0
+timestamp 1699590019
+transform 1 0 11291 0 1 -1135
+box -120 1155 2470 3760
+use dac  dac_0
+timestamp 1699588500
+transform 0 1 8302 -1 0 2622
+box -102 -2435 2602 2659
+<< end >>
