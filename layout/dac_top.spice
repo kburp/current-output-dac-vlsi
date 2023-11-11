@@ -158,9 +158,9 @@ Xbig_0 dac_0/VP VSUBS big_0/VBN big_0/VIN big
 Xcascode_biasgen_0 big_0/VBN VSUBS dac_0/Vgate dac_0/VP cascode_biasgen
 Xmux_tall_0 dac_0/b0 VSUBS big_0/VBN dac_0/VP dac_0/VP VSUBS mux_tall
 Xmux_tall_1 dac_0/b1 VSUBS big_0/VBN dac_0/VP dac_0/VP VSUBS mux_tall
-Xmux_tall_2 dac_0/b2 VSUBS big_0/VBN dac_0/VP mux_tall_2/w_150_240# VSUBS mux_tall
-Xmux_tall_3 dac_0/b3 VSUBS big_0/VBN dac_0/VP mux_tall_3/w_150_240# VSUBS mux_tall
-Xmux_tall_4 dac_0/b4 VSUBS big_0/VBN dac_0/VP mux_tall_4/w_150_240# VSUBS mux_tall
+Xmux_tall_2 dac_0/b2 VSUBS big_0/VBN dac_0/VP dac_0/VP VSUBS mux_tall
+Xmux_tall_3 dac_0/b3 VSUBS big_0/VBN dac_0/VP dac_0/VP VSUBS mux_tall
+Xmux_tall_4 dac_0/b4 VSUBS big_0/VBN dac_0/VP dac_0/VP VSUBS mux_tall
 Xmux_tall_5 dac_0/b5 VSUBS big_0/VBN dac_0/VP dac_0/VP VSUBS mux_tall
 Xmux_tall_6 dac_0/b6 VSUBS big_0/VBN dac_0/VP dac_0/VP VSUBS mux_tall
 .end
